@@ -1,12 +1,15 @@
-import { day1 } from './day1';
 import { logAnswer } from '../utils/logging';
+import { day1 } from './day1';
+import { data, testData } from './day1.data';
+
+
 
 test('Provided test cases', () => {
-  expect(day1()).toBe(1);
+  expect(day1(testData)).toBe(11);
 });
 
 test('Returns an answer', () => {
-  logAnswer(day1());
-  expect(typeof day1()).toBe('number');
-  expect(day1()).toBeGreaterThan(0);
+  logAnswer(day1(data));
+  expect(typeof day1(data)).toBe('number');
+  expect(day1(data)).toBeGreaterThan(0);
 });
